@@ -5,10 +5,8 @@
 
 # Example
 
-<image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no1.gif?raw=true" width="300px"/> 
-<image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no2.gif?raw=true" width="300px"/>  
-<image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no3.png?raw=true" width="300px"/>  
-<image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no4.png?raw=true" width="300px"/>
+<image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no1.gif?raw=true" width="300px"/> <image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no2.gif?raw=true" width="300px"/>  
+<image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no3.png?raw=true" width="300px"/>  <image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no4.png?raw=true" width="300px"/>
 <image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no5.png?raw=true" width="300px"/>
 ---
 
