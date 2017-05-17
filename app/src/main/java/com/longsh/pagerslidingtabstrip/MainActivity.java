@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
         //设置Tab底部分割线的颜色
         //tabs.setUnderlineColorResource(R.color.colorGray);
         // 设置点击某个Tab时的背景色,设置为0时取消背景色tabs.setTabBackground(0);
-        tabs.setTabBackground(R.drawable.bg_tab);
-//        tabs.setTabBackground(0);
+//        tabs.setTabBackground(R.drawable.bg_tab);
+        tabs.setTabBackground(0);
         // 设置Tab是自动填充满屏幕的
         tabs.setShouldExpand(true);
     }
