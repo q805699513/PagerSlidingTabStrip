@@ -116,7 +116,7 @@ dependencies {
   有其他需求可以给我提Issues
   
 ### 感谢大佬
-*   [PagerSlidingTabStrip](https://github.com/jpardogo/PagerSlidingTabStrip)
+*   [PagerSlidingTabStrip](https://github.com/astuetz/PagerSlidingTabStrip)
   
 ## License
 ```text
