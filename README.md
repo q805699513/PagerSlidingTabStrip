@@ -1,19 +1,15 @@
 # PagerSlidingTabStrip
 
-一款TabLayout、PagerSlidingTabStrip
+一款android指示器TabLayout、PagerSlidingTabStrip
 ---
 
 # Example
 
 <image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no1.gif?raw=true" width="300px"/> 
-
 <image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no2.gif?raw=true" width="300px"/>  
-
 <image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no3.png?raw=true" width="300px"/>  
-
 <image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no4.png?raw=true" width="300px"/>
-
- <image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no5.png?raw=true" width="300px"/>
+<image src="https://github.com/q805699513/PagerSlidingTabStrip/blob/master/image/no5.png?raw=true" width="300px"/>
 ---
 
 # Usage
@@ -44,38 +40,38 @@ dependencies {
     
 ```
 
-### 仿微信中间弹出框
+### 设置参数setTabsValue();
 ```java
     private void setTabsValue() {
-    DisplayMetrics dm = getResources().getDisplayMetrics();
-    // 设置Tab底部选中的指示器Indicator的高度
-    tabs.setIndicatorHeight(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2.5f, dm));
-    // 设置Tab底部选中的指示器 Indicator的颜色
-    tabs.setIndicatorColorResource(R.color.colorPrimary);
-    //设置指示器Indicatorin是否跟文本一样宽，默认false
-    tabs.setIndicatorinFollowerTv(false);
-    //设置小红点提示，item从0开始计算，true为显示，false为隐藏，默认为全部隐藏
-//    tabs.setMsgToast(2, true);
-    //设置红点滑动到当前页面自动消失,默认为true
-    tabs.setMsgToastPager(true);
-    //设置Tab标题文字的颜色
-    //tabs.setTextColor(R.color.***);
-    // 设置Tab标题文字的大小
-    tabs.setTextSize((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 15, dm));
-    // 设置选中的Tab文字的颜色
-    tabs.setSelectedTextColorResource(R.color.colorPrimary);
-    //设置Tab底部分割线的高度
-    tabs.setUnderlineHeight(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 1f, dm));
-    //设置Tab底部分割线的颜色
-    //tabs.setUnderlineColorResource(R.color.colorGray);
-    // 设置点击某个Tab时的背景色,设置为0时取消背景色tabs.setTabBackground(0);
-//        tabs.setTabBackground(R.drawable.bg_tab);
-    tabs.setTabBackground(0);
-    // 设置Tab是自动填充满屏幕的
-    tabs.setShouldExpand(true);
-}
+          DisplayMetrics dm = getResources().getDisplayMetrics();
+          // 设置Tab底部选中的指示器Indicator的高度
+          tabs.setIndicatorHeight(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2.5f, dm));
+          // 设置Tab底部选中的指示器 Indicator的颜色
+          tabs.setIndicatorColorResource(R.color.colorPrimary);
+          //设置指示器Indicatorin是否跟文本一样宽，默认false
+          tabs.setIndicatorinFollowerTv(false);
+          //设置小红点提示，item从0开始计算，true为显示，false为隐藏，默认为全部隐藏
+      //    tabs.setMsgToast(2, true);
+          //设置红点滑动到当前页面自动消失,默认为true
+          tabs.setMsgToastPager(true);
+          //设置Tab标题文字的颜色
+          //tabs.setTextColor(R.color.***);
+          // 设置Tab标题文字的大小
+          tabs.setTextSize((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 15, dm));
+          // 设置选中的Tab文字的颜色
+          tabs.setSelectedTextColorResource(R.color.colorPrimary);
+          //设置Tab底部分割线的高度
+          tabs.setUnderlineHeight(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 1f, dm));
+          //设置Tab底部分割线的颜色
+          //tabs.setUnderlineColorResource(R.color.colorGray);
+          // 设置点击某个Tab时的背景色,设置为0时取消背景色tabs.setTabBackground(0);
+      //        tabs.setTabBackground(R.drawable.bg_tab);
+          tabs.setTabBackground(0);
+          // 设置Tab是自动填充满屏幕的
+          tabs.setShouldExpand(true);
+   }
 ```
-[使用参考类](https://github.com/q805699513/PagerSlidingTabStrip/blob/master/app/src/main/java/com/longsh/pagerslidingtabstrip/MainActivity.java)
+
 ###  setOnPageChangeListener
 ```java
     tabs.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -99,6 +95,23 @@ dependencies {
     });
 ```
 
+###  XML布局代码
+```java
+ <com.longsh.longshlibrary.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        />
+        
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+```
+
+
+###  使用参考类
+[使用参考类](https://github.com/q805699513/PagerSlidingTabStrip/blob/master/app/src/main/java/com/longsh/pagerslidingtabstrip/MainActivity.java)
 
 ### Version: 1.0.0
 
