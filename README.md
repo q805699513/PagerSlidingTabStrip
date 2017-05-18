@@ -33,7 +33,7 @@ dependencies {
     //设置参数
     setTabsValue();
     
-     //设置小红点提示，item从0开始计算，true为显示，false为隐藏，默认为全部隐藏
+     //例：设置第三个tab小红点显示，item从0开始计算，true为显示，false为隐藏，默认为全部隐藏
       //tabs.setMsgToast(2, true);
       
     //MyPagerAdapter为普通的FragmentPagerAdapter
