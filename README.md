@@ -70,29 +70,6 @@ dependencies {
    }
 ```
 
-###  setOnPageChangeListener
-```java
-    tabs.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-        @Override
-        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-        }
-
-        @Override
-        public void onPageSelected(int position) {
-            if (position == 2) {
-                //手动隐藏第二个小红点，tabs.setMsgToastPager(false);该方法为false时才需要手动隐藏。
-                //tabs.setMsgToast(2, false);
-            }
-        }
-        
-        @Override
-        public void onPageScrollStateChanged(int state) {
-
-        }
-    });
-```
-
 ###  XML布局代码
 ```java
  <com.longsh.longshlibrary.PagerSlidingTabStrip
@@ -105,6 +82,29 @@ dependencies {
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+```
+
+###  如果你需要监听viewpager的滑动状态setOnPageChangeListener
+```java
+    tabs.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+           //if (position == 2) {
+                //手动隐藏第二个小红点，tabs.setMsgToastPager(false);该方法为false时才需要手动隐藏。
+                //tabs.setMsgToast(2, false);
+           //}
+        }
+        
+        @Override
+        public void onPageScrollStateChanged(int state) {
+
+        }
+    });
 ```
 
 
