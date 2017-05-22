@@ -1,6 +1,6 @@
 # PagerSlidingTabStrip
 
-一款android指示器TabLayout、PagerSlidingTabStrip，带有红点未读提示
+一款android指示器TabLayout、PagerSlidingTabStrip，仿Boss直聘，带有红点未读提示
 ---
 
 # Example
