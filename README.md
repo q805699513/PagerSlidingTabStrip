@@ -117,7 +117,9 @@ dependencies {
 ### Version: 1.0.0
 
   有其他需求可以给我提Issues，喜欢可以给个star，鼓励作者更新0.0
-  
+  
+## Thanks
+* [PagerSlidingTabStrip](https://github.com/astuetz/PagerSlidingTabStrip)  
   
 ## License
 ```text
