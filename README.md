@@ -116,7 +116,7 @@ dependencies {
 
 ### Version: 1.0.0
 
-  有其他需求可以给我提Issues，喜欢可以给个star，鼓励作者更新0.0
+  有其他需求可以给我提Issues，我在res/layout/布局里面设置了android:maxLength="5"，限制每个tab最多显示5个字符，如果超过了5个字符的请下载源码去掉这行。
   
 ## Thanks
 * [PagerSlidingTabStrip](https://github.com/astuetz/PagerSlidingTabStrip)  
