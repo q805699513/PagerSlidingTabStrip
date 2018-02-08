@@ -16,7 +16,7 @@
 
 ```groovy
 dependencies {
- compile 'com.longsh:PagerSlidingTabStrip:1.0.0' 
+ compile 'com.longsh:PagerSlidingTabStrip:1.0.1'
 }
 
 ```
@@ -70,6 +70,9 @@ dependencies {
           tabs.setTabBackground(0);
           // 设置Tab是自动填充满屏幕的
           tabs.setShouldExpand(true);
+
+          //设置标签是否需要滑动，多个tab文字不够一屏显示的时候使用，后面会改成内部自动判断-----------------------------------------//todo
+          tabs.setTabsScroll(true);
    }
 ```
 
@@ -113,6 +116,11 @@ dependencies {
 
 ###  使用参考类
 [使用参考类](https://github.com/q805699513/PagerSlidingTabStrip/blob/master/app/src/main/java/com/longsh/pagerslidingtabstrip/MainActivity.java)
+### Version: 1.0.1
+
+  新增tabs.setTabsScroll(true);设置标签是否需要滑动，多个tab文字不够一屏显示的时候使用
+    todo //后续有时间会弄成内部自动判断。
+
 
 ### Version: 1.0.0
 
