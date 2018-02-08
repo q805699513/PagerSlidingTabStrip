@@ -45,6 +45,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
     private LinearLayout.LayoutParams defaultTabLayoutParams;
     private LinearLayout.LayoutParams expandedTabLayoutParams;
+    private LinearLayout.LayoutParams scrollTabLayoutParams;
 
     private final PageListener pageListener = new PageListener();
     public OnPageChangeListener delegatePageListener;
@@ -66,7 +67,11 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
     private int underlineColor = 0x1A000000;
     private int dividerColor = 0x00000000;
 
+    //设置Tab是自动填充满屏幕的
     private boolean shouldExpand = false;
+    //设置标签是否需要滑动
+    private boolean tabsScroll = false;
+
     private boolean indicatorinFollowerTv = false;
 
     private boolean textAllCaps = true;
@@ -155,7 +160,8 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         dividerPaint.setStrokeWidth(dividerWidth);
 
         defaultTabLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-        expandedTabLayoutParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        scrollTabLayoutParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        expandedTabLayoutParams = new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT,1);
 
         if (locale == null) {
             locale = getResources().getConfiguration().locale;
@@ -237,8 +243,11 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         });
 
 //        layoutView.setPadding(tabPadding, 0, tabPadding, 0);
-
-        tabsContainer.addView(layoutView, position, shouldExpand ? expandedTabLayoutParams : defaultTabLayoutParams);
+        if (tabsScroll){
+            tabsContainer.addView(layoutView, position, shouldExpand ? scrollTabLayoutParams : defaultTabLayoutParams);
+        }else {
+            tabsContainer.addView(layoutView, position, shouldExpand ? expandedTabLayoutParams : defaultTabLayoutParams);
+        }
     }
 
     //设置红点滑动到当前页面自动消失
@@ -498,6 +507,11 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
     public void setShouldExpand(boolean shouldExpand) {
         this.shouldExpand = shouldExpand;
+        notifyDataSetChanged();
+    }
+
+    public void setTabsScroll(boolean tabsScroll) {
+        this.tabsScroll = tabsScroll;
         notifyDataSetChanged();
     }
 

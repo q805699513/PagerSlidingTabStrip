@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         //设置小红点,item从0开始计算
 //        tabs.setMsgToast(1, true);
         tabs.setMsgToast(0, true);
+        tabs.setMsgToast(3, true);
         tabs.setMsgToast(4, true);
         tabs.setMsgToast(6, true);
 
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         // 设置Tab底部选中的指示器 Indicator的颜色
         tabs.setIndicatorColorResource(R.color.colorPrimary);
         //设置指示器Indicatorin是否跟文本一样宽，默认false
-        tabs.setIndicatorinFollowerTv(true);
+        tabs.setIndicatorinFollowerTv(false);
         //设置小红点提示，item从0开始计算，true为显示，false为隐藏
 //        tabs.setMsgToast(2, true);
         //设置红点滑动到当前页面自动消失,默认为true
@@ -92,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
         tabs.setTabBackground(0);
         // 设置Tab是自动填充满屏幕的
         tabs.setShouldExpand(true);
+        //设置标签是否需要滑动，多个tab不够一屏显示的时候使用，后面会改成内部自动判断
+        tabs.setTabsScroll(true);
     }
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
@@ -102,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
         //     "我的的", "看过我", "新职位", "第四个", "第五个", "嘿嘿", "没有啦"
         private final String[] titles = {"我的的啊啊啊", "看过我", "新职位", "第四个", "第五个的哦", "嘿嘿", "没有啦"};
-
+//        private final String[] titles = {"我的的啊啊啊", "看过我","看过我的"};
 
         @Override
         public CharSequence getPageTitle(int position) {
