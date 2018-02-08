@@ -25,6 +25,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -154,7 +155,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         dividerPaint.setStrokeWidth(dividerWidth);
 
         defaultTabLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-        expandedTabLayoutParams = new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1.0f);
+        expandedTabLayoutParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 
         if (locale == null) {
             locale = getResources().getConfiguration().locale;
@@ -236,6 +237,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         });
 
 //        layoutView.setPadding(tabPadding, 0, tabPadding, 0);
+
         tabsContainer.addView(layoutView, position, shouldExpand ? expandedTabLayoutParams : defaultTabLayoutParams);
     }
 
@@ -350,6 +352,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         if (currentTab instanceof TextView) {
             TextView tab = (TextView) currentTab.findViewById(R.id.tv_content);
             tvWidth = tab.getPaint().measureText(tab.getText().toString() + "");
+            Log.d("viewlog",tab.getText().toString());
         }
         Log.d("viewlog", "lineLeft=" + lineLeft + ",lineRight=" + lineRight);
 
