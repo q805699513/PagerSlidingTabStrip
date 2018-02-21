@@ -16,8 +16,9 @@
 
 ```groovy
 dependencies {
-//稳定版
-compile 'com.longsh:PagerSlidingTabStrip:1.0.1'
+ //稳定版（推荐）
+ compile 'com.longsh:PagerSlidingTabStrip:1.0.0'
+ //测试版
  compile 'com.longsh:PagerSlidingTabStrip:1.0.1'
 }
 
