@@ -16,7 +16,7 @@
 
 ```groovy
 dependencies {
- //稳定版（推荐）
+ //稳定版（推荐）没特殊需求建议使用官方TabLayout控件
  compile 'com.longsh:PagerSlidingTabStrip:1.0.0'
  //测试版
  compile 'com.longsh:PagerSlidingTabStrip:1.0.1'
