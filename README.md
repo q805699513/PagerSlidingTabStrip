@@ -16,6 +16,8 @@
 
 ```groovy
 dependencies {
+//稳定版
+compile 'com.longsh:PagerSlidingTabStrip:1.0.1'
  compile 'com.longsh:PagerSlidingTabStrip:1.0.1'
 }
 
@@ -72,7 +74,7 @@ dependencies {
           tabs.setShouldExpand(true);
 
           //设置标签是否需要滑动，多个tab文字不够一屏显示的时候使用，后面会改成内部自动判断-----------------------------------------//todo
-         //必须设置
+         //必须设置1.0.0不需要设置这行
          tabs.setTabsScroll(true);
    }
 ```
